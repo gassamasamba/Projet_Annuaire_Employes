@@ -1,0 +1,32 @@
+{% extends "bases.html.twig" %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/style.css')}}" style="text/css">
+{% endblock %}
+{% block main %}
+<div class="container">
+<table>
+<thead class="head">
+<tr>
+<th>Id</th><th>Name</th><th>Adresse</th><th>Ville</th><th>ZipCode</th><th colspan="2">Action</th>
+</tr>
+</thead>
+<tbody>
+{% for client in clients %}
+<tr>
+<td>{{client.id}}</td>
+<td>{{client.name}}</td>
+<td>{{client.adress}}</td>
+<td>{{client.city}}</td>
+<td>{{client.zipcode}}</td>
+<td><a href="{{path('update_client',{'id':client.id})}}">Modifier</a></td>
+<td><a href="{{path('delete_client', {'id':client.id})}}">Supprimer</a></td>
+</tr>
+    
+{% endfor %}
+</tbody>
+</table>
+</div>
+<a href="{{path('create_client')}}" class="ajoutEmploy">Ajouter/Client</a>
+
+
+{% endblock %}

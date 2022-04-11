@@ -1,0 +1,95 @@
+{% extends "bases.html.twig" %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('css/style.css')}}" style="text/css">
+{% endblock %}
+{% block main %}
+	<div class="container2">
+		{{form_start(employeForm)}}
+
+
+		<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.prenom, 'PreNom :', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.prenom, {'attr' : {'class' : 'input', 'placeholder' : 'presNom'} } ) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.nom, 'Nom :', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.nom, {'attr' : {'class' : 'input', 'placeholder' : 'Nom'} } ) }}
+			</div>
+		</div>
+
+
+		<div class="row">
+
+			<div class="col-25">
+				{{form_label(employeForm.telephone, 'Telephone:', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.telephone, {'attr' : {'class' : 'input', 'placeholder' : 'Telephone'} } ) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.email, 'Email :', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.email, {'attr' : {'class' : 'input', 'placeholder' : 'Email'} } ) }}
+			</div>
+		</div>
+
+
+		<div class="row">
+
+			<div class="col-25">
+				{{form_label(employeForm.adresse, 'Adresse :', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.adresse, {'attr' : {'class' : 'input', 'placeholder' : 'Adresse'} } ) }}
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.poste, 'Poste:', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75">
+				{{form_widget(employeForm.poste, {'attr' : {'class' : 'input', 'placeholder' : 'Poste'} } ) }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.datedenaissance, 'Date Naissance:', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75 daten">
+				{{form_widget(employeForm.datedenaissance, {'attr' : {'class' : 'input', 'placeholder' : 'Date Naissance'} } ) }}
+			</div>
+		</div>
+			<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.client, 'Client:', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75 daten">
+				{{form_widget(employeForm.client, {'attr' : {'class' : 'input', 'placeholder' : 'Date Naissance'} } ) }}
+			</div>
+		</div>
+			<div class="row">
+			<div class="col-25">
+				{{form_label(employeForm.service, 'Service:', {'label_attr' : {'class' : 'label'} } ) }}
+			</div>
+			<div class="col-75 daten">
+				{{form_widget(employeForm.service, {'attr' : {'class' : 'input', 'placeholder' : 'Service'} } ) }}
+			</div>
+		</div>
+		<div class="row submit">
+			{{form_widget(employeForm.Enregistrer, {'attr' : {'class' : 'input'} } ) }}
+		</div>
+		{{form_end(employeForm)}}
+	</div>
+{% endblock %}

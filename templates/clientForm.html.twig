@@ -1,0 +1,18 @@
+{% extends "bases.html.twig" %}
+{% block stylesheets %}
+<link rel="stylesheet" href="style.css" style="text/css">
+{% endblock %}
+{% block main %}
+{{form_start(clientForm)}}
+	{{form_label(clientForm.name, 'Nom  :', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(clientForm.name, {'attr' : {'class' : 'input', 'placeholder' : 'Nom '} } ) }}
+	{{form_label(clientForm.adress, 'Adresse :', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(clientForm.adress, {'attr' : {'class' : 'input', 'placeholder' : 'Adresse'} } ) }}
+    {{form_label(clientForm.city, 'Ville :', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(clientForm.city, {'attr' : {'class' : 'input', 'placeholder' : 'Ville'} } ) }}
+    {{form_label(clientForm.zipcode, 'Zipcode :', {'label_attr' : {'class' : 'label'} } ) }}
+	{{form_widget(clientForm.zipcode, {'attr' : {'class' : 'input', 'placeholder' : 'Zipcode'} } ) }}
+	{{form_widget(clientForm.Enregistrer, {'attr' : {'class' : 'input'} } ) }}
+    {{form_end(clientForm)}}
+
+{% endblock %}

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    background-color: gray;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+/* table, td, th {
+    border: 2px solid black;
+    
+} */
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+th{
+    height:50px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+tr:hover {
+    height:25px;
+    background-color: coral;
+}
+td{
+    text-align:center;
+    vertical-align:center;
+}
+.container{
+    margin: 10px;
+}
+thead tr th {
+    background-color:green;
+    color: white;
+}
+td a {
+    text-decoration: none;
+    font-size:20px;
+    display:inline-block;
+    background-color: blue;
+    color:white;
+    border-radius:10px;
+}
+#supp{
+    background-color: red;
+}
+.ajoutEmploy{
+    margin-top:28px;
+    background-color: blue;
+    border-radius: 5px;
+    color:white;
+    display:inline-block;
+    text-decoration: none;
+    text-align:center;
+    width: 100px;
+    margin-left:20px;
+
+}
+.container2{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding:20px;
+}
+
+
+input , .daten{
+    
+    width:100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    resize: vertical;
+    
+
+}
+button[type=submit]{
+    background-color: green;
+    padding: 12px 20px;
+    border: none;
+    float: right;  
+    border-radius: 5px;
+    border: none;
+    width:5%;
+    margin-top:12px;
+    
+
+} 
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.col-25{
+    width:25%;
+    float:float;
+    margin: top 5px;
+}
+.col-75{
+    width:75%;
+    float:float;
+    margin: top 5px;
+}
+.row:after{
+    content:"";
+    display:table;
+    clear: both;
+}

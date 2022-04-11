@@ -1,0 +1,15 @@
+{% extends "bases.html.twig" %}
+{% block stylesheets %}
+{% endblock %}
+{% block main %}
+{{form_start(services)}}
+{{form_label(services.name, 'Nom:', {'label_attr': {'class' : 'label'}})}}
+{{form_widget(services.name, {'attr' : {'class': 'input', 'placeholder':'nom'}})}}
+{{form_label(services.bureau, 'Bureau:', {'label_attr': {'class' : 'label'}})}}
+{{form_widget(services.bureau, {'attr' : {'class': 'input', 'placeholder':'bureau'}})}}
+{{form_label(services.etage,'Etage:', {'label_attr': {'class' : 'label'}})}}
+{{form_widget(services.etage, {'attr' : {'class': 'input', 'placeholder':'etage'}})}}
+{{form_widget(services.Enregistrer, {'attr': {'class' : 'input'}})}}
+{{form_end(services)}}
+
+{% endblock %}
